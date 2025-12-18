@@ -1,0 +1,2 @@
+C:\Huynh\Unity\Projects\TakeDown\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Huynh\Unity\Projects\TakeDown\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
