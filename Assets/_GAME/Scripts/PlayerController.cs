@@ -25,14 +25,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float followSpeed = 15f;
 
     [Header("Roll")]
-    const float CAM_ROTATE_LEFT = 5f;
-    const float CAM_ROTATE_RIGHT = -5f;
+    const float CAM_ROTATE_LEFT = 0f;
+    const float CAM_ROTATE_RIGHT = 0f;
 
-    const float CAM_POSITION_LEFT = -1.5f;
-    const float CAM_POSITION_RIGHT = 1.5f;
+    const float CAM_POSITION_LEFT = -0.5f;
+    const float CAM_POSITION_RIGHT = 0.5f;
 
-    const float POS_LEFT = -1.8f;
-    const float POS_RIGHT = 1.8f;
+    const float POS_LEFT = -1.6f;
+    const float POS_RIGHT = 1.6f;
 
     Vector2 swipeStartPos;
     bool isSwipeDetected = false;

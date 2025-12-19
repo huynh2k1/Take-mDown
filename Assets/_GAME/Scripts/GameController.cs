@@ -21,8 +21,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        Application.targetFrameRate = 120;
-        Home();
+        InitialGame();
     }
 
     private void OnEnable()
@@ -32,29 +31,42 @@ public class GameController : MonoBehaviour
 
         UIGame.OnPauseClicked += PauseGame;  
 
-        UILose.OnHomeClicked += Home;
-        UILose.OnReplayClicked += StartGame;
+        UILose.OnHomeClicked += BackToHome;
+        UILose.OnReplayClicked += ReplayGame;
 
-        UIWin.OnHomeClicked += Home;
-        UIWin.OnReplayClicked += StartGame;
-        UIWin.OnNextClicked += StartGame;
+        UIWin.OnHomeClicked += BackToHome;
+        UIWin.OnReplayClicked += ReplayGame;
+        UIWin.OnNextClicked += NextGame;
 
-        UIPause.OnHomeClicked += Home;
+        UIPause.OnHomeClicked += BackToHome;
         UIPause.OnResumeClicked += ResumeGame;
 
         PlayerController.OnPlayerDead += LoseGame;
     }
 
-    void Home()
+    void InitialGame()
     {
+        Application.targetFrameRate = 120;
+
         CurState = State.WAIT;
         uiCtrl.ShowHome();
     }
 
+    void BackToHome()
+    {
+        CurState = State.WAIT;
+        uiCtrl.SwitchUI(UIType.GAME, UIType.HOME);
+    }
+
     void StartGame()
     {
+        uiCtrl.SwitchUI(UIType.HOME, UIType.GAME);
+        SetupGame();
+    }
+
+    void SetupGame()
+    {
         CurState = State.PLAYING;
-        uiCtrl.ShowGame();
         levelCtrl.InitLevelByID(GameData.CurLevel);
         //spawnCtrl.StartSpawn();
         playerCtrl.Init();
@@ -86,17 +98,27 @@ public class GameController : MonoBehaviour
 
     void ReplayGame()
     {
-        if(GameData.CurLevel > 0)
+        uiCtrl.TransitionFX(() =>
         {
-            GameData.CurLevel--;
-        }
-        else
-        {
-            GameData.CurLevel = 0;
-        }
-        StartGame();
+            if(GameData.CurLevel > 0)
+            {
+                GameData.CurLevel--;
+            }
+            else
+            {
+                GameData.CurLevel = 0;
+            }
+            SetupGame();
+        });
     }
 
+    void NextGame()
+    {
+        uiCtrl.TransitionFX(() =>
+        {
+            SetupGame();
+        });
+    }
     void Setting()
     {
         uiCtrl.Show(UIType.SETTING);
