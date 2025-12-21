@@ -5,7 +5,29 @@ using UnityEngine;
 
 public class Enemy : BaseObjectMove
 {
-    private Animator _animator;
+    #region EDITOR
+    [SerializeField] float _horizontalDistance = 0.7f;
+    [SerializeField] float _verticalDistance = 7f;
+
+    [Button("Move Left")]
+    public void MoveLeft() => Move(Vector3.left * _horizontalDistance);
+
+    [Button("Move Right")]
+    public void MoveRight() => Move(Vector3.right * _horizontalDistance);
+
+    [Button("Move Up")]
+    public void MoveUp() => Move(Vector3.forward * _verticalDistance);
+
+    [Button("Move Down")]
+    public void MoveDown() => Move(Vector3.back * _verticalDistance);
+
+    private void Move(Vector3 offset)
+    {
+        transform.position += offset;
+    }
+    #endregion
+
+    [SerializeField] Animator _animator;
     Rigidbody[] _rbRagdoll;
     Collider[] _colliders;
 
@@ -38,10 +60,9 @@ public class Enemy : BaseObjectMove
         }
     }
 
+ 
     private void Awake()
     {
-        if(_animator == null)
-            _animator = GetComponent<Animator>();
         Init();
     }
     void Init()
@@ -103,14 +124,7 @@ public class Enemy : BaseObjectMove
             else
             {
                 _animator.SetBool("SweepFall", true);
-                //EnableRagdoll();
                 _isDead = true;
-                //_animator.enabled = false;
-                //EnableRagdoll();
-
-                //Vector3 forceDir = -transform.forward;
-                //part.rb.AddForce(forceDir * pushForce, ForceMode.Impulse);
-
             }
 
         }

@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class GameData : MonoBehaviour
+public static class GameData
 {
     public const string CUR_LEVEL = "CUR_LEVEL";
     public const string COIN = "COIN";
+    public const string FIRSTPLAYGAME = "FIRSTPLAYGAME";
 
     public const string SOUND = "SOUND";
     public const string MUSIC = "MUSIC";
@@ -30,5 +31,11 @@ public class GameData : MonoBehaviour
     {
         get => PlayerPrefs.GetInt(MUSIC, 0) == 0 ? true : false;
         set => PlayerPrefs.SetInt(MUSIC, value ? 0 : 1);
+    }
+
+    public static bool FirstPlayGame
+    {
+        get => PlayerPrefs.GetInt(FIRSTPLAYGAME, 0) == 0 ? true : false;
+        set => PlayerPrefs.SetInt(FIRSTPLAYGAME, value ? 0 : 1);
     }
 }

@@ -115,6 +115,8 @@ public class PlayerController : MonoBehaviour
             0
         );
         cam.transform.DOMoveX(CAM_POSITION_LEFT, 0);
+
+        target.position = Vector3.zero;
         initTargetPos = target.position;
         transform.position = new Vector3(POS_LEFT, 0, 0);
 
@@ -226,7 +228,8 @@ public class PlayerController : MonoBehaviour
     {
         isDragging = false;
         ResetConstraints();
-        target.DOLocalMoveY(initTargetPos.y, 0.15f).SetEase(Ease.OutQuad);
+        //target.DOLocalMoveY(initTargetPos.y, 0.15f).SetEase(Ease.OutQuad);
+        target.position = initTargetPos;
     }
 
     #endregion

@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
         UILose.OnReplayClicked += ReplayGame;
 
         UIWin.OnHomeClicked += BackToHome;
-        UIWin.OnReplayClicked += ReplayGame;
+        UIWin.OnReplayClicked += PreviousGame;
         UIWin.OnNextClicked += NextGame;
 
         UIPause.OnHomeClicked += BackToHome;
@@ -67,16 +67,17 @@ public class GameController : MonoBehaviour
     void SetupGame()
     {
         CurState = State.PLAYING;
-        levelCtrl.InitLevelByID(GameData.CurLevel);
-        //spawnCtrl.StartSpawn();
+        levelCtrl.InitLevelByID();
         playerCtrl.Init();
     }
 
     public void WinGame()
     {
+        if (CurState != State.PLAYING)
+            return;
         CurState = State.WAIT;
-        uiCtrl.Show(UIType.WIN);
         levelCtrl.OnLevelWin();
+        uiCtrl.Show(UIType.WIN);
     }
 
     public void LoseGame()
@@ -100,14 +101,15 @@ public class GameController : MonoBehaviour
     {
         uiCtrl.TransitionFX(() =>
         {
-            if(GameData.CurLevel > 0)
-            {
-                GameData.CurLevel--;
-            }
-            else
-            {
-                GameData.CurLevel = 0;
-            }
+            SetupGame();
+        });
+    }
+
+    void PreviousGame()
+    {
+        uiCtrl.TransitionFX(() =>
+        {
+            levelCtrl.OnLevelReplay();
             SetupGame();
         });
     }
