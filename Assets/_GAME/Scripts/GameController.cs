@@ -8,8 +8,8 @@ public class GameController : MonoBehaviour
     [Header("Refenrences")]
     [SerializeField] UIController uiCtrl;
     [SerializeField] LevelCtrl levelCtrl;
-    //[SerializeField] SpawnController spawnCtrl;
     [SerializeField] PlayerController playerCtrl; 
+    [SerializeField] PanelHeart panelHeart;
 
     public enum State { WAIT, PLAYING }
 
@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
         UIPause.OnResumeClicked += ResumeGame;
 
         PlayerController.OnPlayerDead += LoseGame;
+        panelHeart.OnOutOfHeartAction += LoseGame;
     }
 
     void InitialGame()
@@ -69,6 +70,7 @@ public class GameController : MonoBehaviour
         CurState = State.PLAYING;
         levelCtrl.InitLevelByID();
         playerCtrl.Init();
+        panelHeart.Init();
     }
 
     public void WinGame()
@@ -124,5 +126,10 @@ public class GameController : MonoBehaviour
     void Setting()
     {
         uiCtrl.Show(UIType.SETTING);
+    }
+
+    public void ReduceHeart()
+    {
+        panelHeart.ReduceHeart();
     }
 }

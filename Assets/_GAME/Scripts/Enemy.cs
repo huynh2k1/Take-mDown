@@ -37,6 +37,8 @@ public class Enemy : BaseObjectMove
 
     bool _isDead;
 
+    public bool IsDead => _isDead;
+
     [Button("Setup Ragdoll")]
     public void SetupRagdoll()
     {

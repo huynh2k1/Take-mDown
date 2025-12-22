@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 public class Level : MonoBehaviour
 {
@@ -24,14 +25,20 @@ public class Level : MonoBehaviour
     {
         foreach (var e in _enemies)
         {
-            e.OnEnemyTriggerDestroyArea += RemoveEnemy;
+            e.OnEnemyTriggerDestroyArea -= RemoveEnemy;
         }
     }
 
     void RemoveEnemy(Enemy e)
     {
-        if(_enemies.Contains(e))
+        if (_enemies.Contains(e))
+        {
+            if (!e.IsDead)
+            {
+                GameController.I.ReduceHeart();
+            }
             _enemies.Remove(e);
+        }
         if(_enemies.Count == 0)
         {
             GameController.I.WinGame();
