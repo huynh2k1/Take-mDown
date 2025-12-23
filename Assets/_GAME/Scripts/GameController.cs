@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
 
     private void OnEnable()
     {
-        UIHome.OnReplayClicked += StartGame;
+        UIHome.OnPlayClicked += ShowSelectLevel;
         UIHome.OnHowToPlayClicked += Setting;
 
         UIGame.OnPauseClicked += PauseGame;  
@@ -43,6 +43,8 @@ public class GameController : MonoBehaviour
 
         PlayerController.OnPlayerDead += LoseGame;
         panelHeart.OnOutOfHeartAction += LoseGame;
+
+        UISelectLevel.OnSelectLevelAction += StartGame;
     }
 
     void InitialGame()
@@ -59,16 +61,16 @@ public class GameController : MonoBehaviour
         uiCtrl.SwitchUI(UIType.GAME, UIType.HOME);
     }
 
-    void StartGame()
+    void StartGame(int id)
     {
         uiCtrl.SwitchUI(UIType.HOME, UIType.GAME);
-        SetupGame();
+        SetupGame(id);
     }
 
-    void SetupGame()
+    void SetupGame(int id)
     {
         CurState = State.PLAYING;
-        levelCtrl.InitLevelByID();
+        levelCtrl.InitLevelByID(id);
         playerCtrl.Init();
         panelHeart.Init();
     }
@@ -103,7 +105,7 @@ public class GameController : MonoBehaviour
     {
         uiCtrl.TransitionFX(() =>
         {
-            SetupGame();
+            SetupGame(PrefData.CurLevel);
         });
     }
 
@@ -112,7 +114,7 @@ public class GameController : MonoBehaviour
         uiCtrl.TransitionFX(() =>
         {
             levelCtrl.OnLevelReplay();
-            SetupGame();
+            SetupGame(PrefData.CurLevel);
         });
     }
 
@@ -120,7 +122,7 @@ public class GameController : MonoBehaviour
     {
         uiCtrl.TransitionFX(() =>
         {
-            SetupGame();
+            SetupGame(PrefData.CurLevel);
         });
     }
     void Setting()
@@ -131,5 +133,11 @@ public class GameController : MonoBehaviour
     public void ReduceHeart()
     {
         panelHeart.ReduceHeart();
+    }
+
+
+    public void ShowSelectLevel()
+    {
+        uiCtrl.Show(UIType.SELECTLEVEL);
     }
 }

@@ -36,7 +36,7 @@ public class UIGame : BaseUI
 
     void UpdateTxtLevel()
     {
-        _txtLevel.text = $"LEVEL {GameData.CurLevel + 1}";
+        _txtLevel.text = $"LEVEL {PrefData.CurLevel + 1}";
     }
 
     public void ShowTut(bool isShow)

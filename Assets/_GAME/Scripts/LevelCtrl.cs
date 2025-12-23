@@ -6,11 +6,11 @@ public class LevelCtrl : MonoBehaviour
 
     Level _curLevel;
 
-    public void InitLevelByID()
+    public void InitLevelByID(int id)
     {
         DestroyCurLevel();
-
-        _curLevel = Instantiate(_listLevel[GameData.CurLevel], transform);
+        PrefData.CurLevel = id;
+        _curLevel = Instantiate(_listLevel[id], transform);
     }
 
     void DestroyCurLevel()
@@ -22,27 +22,27 @@ public class LevelCtrl : MonoBehaviour
 
     public void OnLevelWin()
     {
-        if(GameData.CurLevel < _listLevel.Length - 1)
+        if(PrefData.CurLevel < _listLevel.Length - 1)
         {
-            GameData.CurLevel++; 
+            PrefData.CurLevel++; 
         }
         else
         {
-            GameData.CurLevel = 0;
+            PrefData.CurLevel = 0;
         }
 
-        Debug.Log($"CurLevel: {GameData.CurLevel}");
+        Debug.Log($"CurLevel: {PrefData.CurLevel}");
     }
 
     public void OnLevelReplay()
     {
-        if (GameData.CurLevel > 0)
+        if (PrefData.CurLevel > 0)
         {
-            GameData.CurLevel--;
+            PrefData.CurLevel--;
         }
         else
         {
-            GameData.CurLevel = 0;
+            PrefData.CurLevel = 0;
         }
     }
 }

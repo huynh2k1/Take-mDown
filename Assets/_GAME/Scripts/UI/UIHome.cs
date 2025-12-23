@@ -9,7 +9,7 @@ public class UIHome : BaseUI
     [SerializeField] Button _btnPlay;
     [SerializeField] Button _btnHowtoplay;
 
-    public static Action OnReplayClicked;
+    public static Action OnPlayClicked;
     public static Action OnHowToPlayClicked;
 
     private void Awake()
@@ -20,7 +20,7 @@ public class UIHome : BaseUI
 
     void OnClickPlay()
     {
-        OnReplayClicked?.Invoke();    
+        OnPlayClicked?.Invoke();    
     }
 
     void OnClickHowToPlay()

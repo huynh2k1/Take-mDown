@@ -13,4 +13,5 @@ public class UIController : BaseUICtrl
         Show(UIType.GAME);
         Hide(UIType.HOME);
     }
+
 }
