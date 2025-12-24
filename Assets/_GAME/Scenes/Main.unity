@@ -5417,21 +5417,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6272611093602459217, guid: 0a8934f3f653b524a90ad378e29fa608, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8043497393890148570, guid: 0a8934f3f653b524a90ad378e29fa608, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8373682165654723675, guid: 0a8934f3f653b524a90ad378e29fa608, type: 3}
       propertyPath: m_Name
       value: UIWin
       objectReference: {fileID: 0}
     - target: {fileID: 8854710758975345835, guid: 0a8934f3f653b524a90ad378e29fa608, type: 3}
       propertyPath: _length
-      value: 1394.274
+      value: 1207.4767
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -428,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2318223333057681908
 RectTransform:
   m_ObjectHideFlags: 0
@@ -468,7 +468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2691215967318082244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7899823263822563650
 RectTransform:
   m_ObjectHideFlags: 0
@@ -618,7 +618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8102886164467905413
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1813,6 +1813,10 @@ MonoBehaviour:
   btnHome: {fileID: 6772377468401106421}
   btnReplay: {fileID: 2220802261366944395}
   btnNext: {fileID: 5729143578748693349}
+  _stars:
+  - {fileID: 3248287536730542738}
+  - {fileID: 3543102420494210265}
+  - {fileID: 3425201781787443472}
 --- !u!114 &8780633554356560008 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1652979136811473683, guid: 41762bdfbde23f54caa410ad1abd3f35, type: 3}

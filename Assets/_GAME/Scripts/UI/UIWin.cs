@@ -24,6 +24,12 @@ public class UIWin : BasePopup
         btnNext.onClick.AddListener(OnClickNext);
     }
 
+    public override void Show()
+    {
+        base.Show();
+        UpdateStarUIs(GameController.I.GetCurHeartRemaining());
+    }
+
     void OnClickHome()
     {
         Hide(() =>

@@ -143,4 +143,6 @@ public class GameController : MonoBehaviour
     {
         uiCtrl.Show(UIType.SELECTLEVEL);
     }
+
+    public int GetCurHeartRemaining() => panelHeart.GetHeartRemaining();
 }

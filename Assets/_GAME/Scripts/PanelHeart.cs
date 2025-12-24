@@ -38,4 +38,6 @@ public class PanelHeart : MonoBehaviour
             _heartUI[i].InActive();
         }
     }
+
+    public int GetHeartRemaining() => _curHeart;
 }
