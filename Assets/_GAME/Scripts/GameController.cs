@@ -105,6 +105,7 @@ public class GameController : MonoBehaviour
     {
         uiCtrl.TransitionFX(() =>
         {
+            uiCtrl.Show(UIType.GAME);
             SetupGame(PrefData.CurLevel);
         });
     }
@@ -113,6 +114,7 @@ public class GameController : MonoBehaviour
     {
         uiCtrl.TransitionFX(() =>
         {
+            uiCtrl.Show(UIType.GAME);
             levelCtrl.OnLevelReplay();
             SetupGame(PrefData.CurLevel);
         });
@@ -122,6 +124,7 @@ public class GameController : MonoBehaviour
     {
         uiCtrl.TransitionFX(() =>
         {
+            uiCtrl.Show(UIType.GAME);
             SetupGame(PrefData.CurLevel);
         });
     }

@@ -24,7 +24,11 @@ public class LevelCtrl : MonoBehaviour
     {
         if(PrefData.CurLevel < _listLevel.Length - 1)
         {
-            PrefData.CurLevel++; 
+            PrefData.CurLevel++;
+            if(PrefData.CurLevel > PrefData.LevelUnlocked)
+            {
+                PrefData.LevelUnlocked = PrefData.CurLevel;
+            }
         }
         else
         {

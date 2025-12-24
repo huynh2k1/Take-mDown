@@ -17,6 +17,13 @@ public class BasePopup : BaseUI
     [Header("Tween Setup")]
     public float timeTween = 0.3f;
 
+    [Button("Show Popup")]
+    public void ShowPopup()
+    {
+        main.SetActive(true);
+        canvasGroup.alpha = 1;
+    }
+
     [Button("Setup")]
     public void Setup()
     {

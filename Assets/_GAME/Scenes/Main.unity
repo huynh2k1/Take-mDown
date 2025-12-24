@@ -10657,29 +10657,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1490962679539182833, guid: d4cee6cd14c6d2942930be4fbc3945a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1490962679539182833, guid: d4cee6cd14c6d2942930be4fbc3945a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1490962679539182833, guid: d4cee6cd14c6d2942930be4fbc3945a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855889808902134982, guid: d4cee6cd14c6d2942930be4fbc3945a6, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6410561665104396359, guid: d4cee6cd14c6d2942930be4fbc3945a6, type: 3}
       propertyPath: m_Name
       value: UISelectLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8921457966214677069, guid: d4cee6cd14c6d2942930be4fbc3945a6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
