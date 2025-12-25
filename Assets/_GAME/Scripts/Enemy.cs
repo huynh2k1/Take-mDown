@@ -118,6 +118,7 @@ public class Enemy : BaseObjectMove
         if (other.CompareTag(GameTag.PLAYER) && !_isDead)
         {
             _isDead = true;
+            _audioSource.volume = PrefData.Sound;
             _audioSource.Play();
 
 

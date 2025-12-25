@@ -28,16 +28,16 @@ public static class PrefData
         set => PlayerPrefs.SetInt(COIN, value);
     }
 
-    public static bool Sound
+    public static float Sound
     {
-        get => PlayerPrefs.GetInt(SOUND, 0) == 0 ? true : false;
-        set => PlayerPrefs.SetInt(SOUND, value ? 0 : 1);
+        get => PlayerPrefs.GetFloat(SOUND, 1);
+        set => PlayerPrefs.SetFloat(SOUND, value);
     }
 
-    public static bool Music
+    public static float Music
     {
-        get => PlayerPrefs.GetInt(MUSIC, 0) == 0 ? true : false;
-        set => PlayerPrefs.SetInt(MUSIC, value ? 0 : 1);
+        get => PlayerPrefs.GetFloat(MUSIC, 1);
+        set => PlayerPrefs.SetFloat(MUSIC, value);
     }
 
     public static bool FirstPlayGame

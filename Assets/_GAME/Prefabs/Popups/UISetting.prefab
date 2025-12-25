@@ -236,7 +236,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 532960491019576091, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
       propertyPath: m_Name
-      value: UISoundElement (1)
+      value: MUSIC
       objectReference: {fileID: 0}
     - target: {fileID: 2624177832618382901, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
       propertyPath: m_AnchorMax.x
@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 124
       objectReference: {fileID: 0}
+    - target: {fileID: 6671596066953791412, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
+      propertyPath: m_Name
+      value: SliderMusic
+      objectReference: {fileID: 0}
     - target: {fileID: 8661499129931949776, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -359,6 +363,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
+--- !u!114 &1783786756391018838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2351902004448256649, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
+  m_PrefabInstance: {fileID: 4063068143777563615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2065500538750382616 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2650591825433817543, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
@@ -698,6 +713,8 @@ MonoBehaviour:
   main: {fileID: 6272611093602459217}
   btnClose: {fileID: 916287090303827681}
   timeTween: 0.3
+  _sliderSound: {fileID: 6018951177874625732}
+  _sliderMusic: {fileID: 1783786756391018838}
 --- !u!114 &8780633554356560008 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1652979136811473683, guid: 41762bdfbde23f54caa410ad1abd3f35, type: 3}
@@ -719,7 +736,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 532960491019576091, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
       propertyPath: m_Name
-      value: UISoundElement
+      value: SOUND
       objectReference: {fileID: 0}
     - target: {fileID: 2624177832618382901, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
       propertyPath: m_AnchorMax.x
@@ -825,11 +842,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6671596066953791412, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
+      propertyPath: m_Name
+      value: SliderSound
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
+--- !u!114 &6018951177874625732 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2351902004448256649, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}
+  m_PrefabInstance: {fileID: 8296824984220218957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6335708592552888202 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2650591825433817543, guid: 8561d9bb276c93d46a23ec399737bb01, type: 3}

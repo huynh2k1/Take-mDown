@@ -76,8 +76,8 @@ public class UISelectLevel : BasePopup
 
     void UpdateButtonState()
     {
-        _btnPrev.interactable = _currentPage > 0;
-        _btnNext.interactable = _currentPage < _pages.Length - 1;
+        _btnPrev.gameObject.SetActive(_currentPage > 0);
+        _btnNext.gameObject.SetActive(_currentPage < _pages.Length - 1);
     }
 
     #endregion

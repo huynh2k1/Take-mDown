@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 6176411933798858086}
+    - target: {fileID: 7229200767632257954, guid: 6c441da24fc09374c960ebf327ca8715, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: dffa3d867de28cb47bcf56d246fafbfd, type: 3}
+    - target: {fileID: 7229200767632257954, guid: 6c441da24fc09374c960ebf327ca8715, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dffa3d867de28cb47bcf56d246fafbfd, type: 3}
     m_RemovedComponents:
     - {fileID: 8483353358766393713, guid: 6c441da24fc09374c960ebf327ca8715, type: 3}
     - {fileID: 2550915984616670967, guid: 6c441da24fc09374c960ebf327ca8715, type: 3}

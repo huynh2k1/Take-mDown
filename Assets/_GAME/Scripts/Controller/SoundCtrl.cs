@@ -14,7 +14,7 @@ public class SoundCtrl : MonoBehaviour
 
     [Header("AUDIO CLIPS")]
     [SerializeField] AudioClip _bgMusic;
-    [SerializeField] AudioClip _buttonClick, _win, _lose, _roll;
+    [SerializeField] AudioClip _buttonClick, _win, _lose, _dead;
 
 
     private void Awake()
@@ -28,8 +28,22 @@ public class SoundCtrl : MonoBehaviour
         PlayMusic(_bgMusic);
     }
 
+    public void OnVolumeSoundChange()
+    {
+        foreach (var sound in _queueSounds)
+        {
+            sound.volume = PrefData.Sound;
+        }
+    }
+
+    public void OnVolumeMusicChange()
+    {
+        _musicSource.volume = PrefData.Music;
+    }
+
     public void PlayMusic(AudioClip clip)
     {
+        _musicSource.volume = PrefData.Music;
         _musicSource.clip = clip;
         _musicSource.Play();
     }
@@ -47,8 +61,8 @@ public class SoundCtrl : MonoBehaviour
             case TypeSFX.LOSE:
                 PlaySound(_lose);
                 break;
-            case TypeSFX.ROLL:
-                PlaySound(_roll);
+            case TypeSFX.DEAD:
+                PlaySound(_dead);
                 break;
         }
     }
@@ -58,6 +72,7 @@ public class SoundCtrl : MonoBehaviour
         if (_queueSounds.Count == 0) return;
 
         AudioSource source = _queueSounds.Dequeue();
+        source.volume = PrefData.Sound;
         source.PlayOneShot(clip);
         StartCoroutine(ReturnToQueueWhenFinished(source));
     }
@@ -79,5 +94,5 @@ public enum TypeSFX
     CLICK,
     WIN,
     LOSE,
-    ROLL,
+    DEAD,
 }

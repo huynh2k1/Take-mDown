@@ -89,6 +89,8 @@ public class PlayerController : MonoBehaviour
 
     void Dead()
     {
+        SoundCtrl.I.PlaySFXByType(TypeSFX.DEAD);
+
         animator.enabled = false;
 
         isDead = true;
