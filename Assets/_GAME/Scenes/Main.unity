@@ -1679,6 +1679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 287623324}
+  - component: {fileID: 287623325}
   m_Layer: 0
   m_Name: SoundCtrl
   m_TagString: Untagged
@@ -1703,6 +1704,29 @@ Transform:
   - {fileID: 1174849482}
   m_Father: {fileID: 1558483649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &287623325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287623323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197ece1683f2fd64abce6d82ca5f5733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _musicSource: {fileID: 954433051}
+  _soundSources:
+  - {fileID: 1026411621}
+  - {fileID: 411369615}
+  - {fileID: 327171413}
+  - {fileID: 1836237909}
+  _bgMusic: {fileID: 8300000, guid: 8e44780d8bbfc9642941e4ab8b016f12, type: 3}
+  _buttonClick: {fileID: 8300000, guid: a9a66d59f9f9a9a4b929b8fdc5565826, type: 3}
+  _win: {fileID: 8300000, guid: 5fe084254bd30d34a97d22834c00203d, type: 3}
+  _lose: {fileID: 8300000, guid: 4b7b0d1925d9240478a2f345e5edfdf1, type: 3}
+  _roll: {fileID: 0}
 --- !u!1001 &303407590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4009,7 +4033,7 @@ GameObject:
   - component: {fileID: 954433050}
   - component: {fileID: 954433051}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: MusicSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

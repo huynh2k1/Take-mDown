@@ -14,7 +14,7 @@ public class SoundCtrl : MonoBehaviour
 
     [Header("AUDIO CLIPS")]
     [SerializeField] AudioClip _bgMusic;
-    [SerializeField] AudioClip _buttonClick, _win, _lose, _maleFall, _femaleFall, _roll;
+    [SerializeField] AudioClip _buttonClick, _win, _lose, _roll;
 
 
     private void Awake()
@@ -58,8 +58,7 @@ public class SoundCtrl : MonoBehaviour
         if (_queueSounds.Count == 0) return;
 
         AudioSource source = _queueSounds.Dequeue();
-        source.clip = clip;
-        source.Play();
+        source.PlayOneShot(clip);
         StartCoroutine(ReturnToQueueWhenFinished(source));
     }
 
