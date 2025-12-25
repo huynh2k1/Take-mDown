@@ -79,6 +79,7 @@ public class GameController : MonoBehaviour
     {
         if (CurState != State.PLAYING)
             return;
+        SoundCtrl.I.PlaySFXByType(TypeSFX.WIN);
         CurState = State.WAIT;
         levelCtrl.OnLevelWin();
         uiCtrl.Show(UIType.WIN);
@@ -86,6 +87,7 @@ public class GameController : MonoBehaviour
 
     public void LoseGame()
     {
+        SoundCtrl.I.PlaySFXByType(TypeSFX.LOSE);
         CurState = State.WAIT;
         uiCtrl.Show(UIType.LOSE);
     }

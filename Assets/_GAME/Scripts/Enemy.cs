@@ -26,7 +26,7 @@ public class Enemy : BaseObjectMove
         transform.position += offset;
     }
     #endregion
-
+    [SerializeField] AudioSource _audioSource;
     [SerializeField] Animator _animator;
     Rigidbody[] _rbRagdoll;
     Collider[] _colliders;
@@ -118,7 +118,9 @@ public class Enemy : BaseObjectMove
         if (other.CompareTag(GameTag.PLAYER) && !_isDead)
         {
             _isDead = true;
-                                
+            _audioSource.Play();
+
+
             if (part.transform.position.y < 1f)
             {
                 Dead(); // Bật ragdoll

@@ -29,6 +29,7 @@ public class ButtonJelly : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         _btn.onClick.AddListener(() =>
         {
+            SoundCtrl.I.PlaySFXByType(TypeSFX.CLICK);
             StartDelay();
         });
     }

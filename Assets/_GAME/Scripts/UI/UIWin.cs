@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -53,19 +54,33 @@ public class UIWin : BasePopup
             OnNextClicked?.Invoke();
         });
     }
-
     public void UpdateStarUIs(int starCount)
     {
-        DeActiveAllStart();
-        for(int i = 0; i < starCount; i++)
+        DeActiveAllStar();
+
+        float delay = 0f;
+        for (int i = 0; i < starCount && i < _stars.Length; i++)
         {
-            _stars[i].SetActive(true);
+            PlayStarTween(_stars[i], delay);
+            delay += 0.2f;
         }
     }
 
-    void DeActiveAllStart()
+    void PlayStarTween(GameObject star, float delay)
     {
-        foreach(var star in _stars)
+        star.SetActive(true);
+
+        RectTransform rect = star.GetComponent<RectTransform>();
+        rect.localScale = Vector3.zero;
+
+        rect.DOScale(Vector3.one, 0.4f)
+            .SetDelay(delay)
+            .SetEase(Ease.OutBack);
+    }
+
+    void DeActiveAllStar()
+    {
+        foreach (var star in _stars)
         {
             star.SetActive(false);
         }
