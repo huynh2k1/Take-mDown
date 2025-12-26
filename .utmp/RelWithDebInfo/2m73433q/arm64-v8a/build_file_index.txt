@@ -1,2 +1,0 @@
-E:\Unity\_OS3D_MiniGames\Take-mDown\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
-E:\Unity\_OS3D_MiniGames\Take-mDown\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

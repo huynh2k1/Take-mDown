@@ -21,6 +21,7 @@ public class UISelectLevel : BasePopup
     private bool _isTweening;
 
     public static Action<int> OnSelectLevelAction;
+    const int LEVEL_PER_PAGE = 5;
 
     protected override void Awake()
     {
@@ -39,7 +40,44 @@ public class UISelectLevel : BasePopup
         for (int i = 0; i < _levelButtons.Length; i++)
             _levelButtons[i].Init(i);
 
+    }
+
+    public override void Show()
+    {
+        base.Show();
+
+        int unlockedLevel = PrefData.LevelUnlocked;
+        int targetPage = unlockedLevel / LEVEL_PER_PAGE;
+
+        JumpToPageImmediate(targetPage);
+
+        for (int i = 0; i < _levelButtons.Length; i++)
+        {
+            _levelButtons[i].Hover(i == unlockedLevel);
+        }
+    }
+
+    void JumpToPageImmediate(int page)
+    {
+        _currentPage = Mathf.Clamp(page, 0, _pages.Length - 1);
+
+        for (int i = 0; i < _pages.Length; i++)
+        {
+            float targetX = (i - _currentPage) * _pageWidth;
+            _pages[i].anchoredPosition = new Vector2(
+                targetX,
+                _pages[i].anchoredPosition.y
+            );
+        }
+
         UpdateButtonState();
+    }
+
+
+    private void OnDestroy()
+    {
+        foreach (var b in _levelButtons)
+            b.OnClickThis -= OnSelectLevel;
     }
 
     #region Page Logic
@@ -86,15 +124,10 @@ public class UISelectLevel : BasePopup
 
     void OnSelectLevel(int id)
     {
-        Hide();
+        //Hide();
         OnSelectLevelAction?.Invoke(id);
     }
 
-    private void OnDestroy()
-    {
-        foreach (var b in _levelButtons)
-            b.OnClickThis -= OnSelectLevel;
-    }
 
     #endregion
 }

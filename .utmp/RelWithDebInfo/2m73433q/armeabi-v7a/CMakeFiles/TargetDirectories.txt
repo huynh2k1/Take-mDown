@@ -1,5 +1,0 @@
-E:/Unity/_OS3D_MiniGames/Take-mDown/.utmp/RelWithDebInfo/2m73433q/armeabi-v7a/CMakeFiles/edit_cache.dir
-E:/Unity/_OS3D_MiniGames/Take-mDown/.utmp/RelWithDebInfo/2m73433q/armeabi-v7a/CMakeFiles/rebuild_cache.dir
-E:/Unity/_OS3D_MiniGames/Take-mDown/.utmp/RelWithDebInfo/2m73433q/armeabi-v7a/GameActivity/CMakeFiles/game.dir
-E:/Unity/_OS3D_MiniGames/Take-mDown/.utmp/RelWithDebInfo/2m73433q/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
-E:/Unity/_OS3D_MiniGames/Take-mDown/.utmp/RelWithDebInfo/2m73433q/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir
