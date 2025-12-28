@@ -8,15 +8,10 @@ public class UIController : BaseUICtrl
         Hide(UIType.GAME);
     }
 
-    public void OnLevelWin()
+    public void ShowGame()
     {
-        Hide(UIType.GAME);
-        Show(UIType.WIN);
+        Show(UIType.GAME);
+        Hide(UIType.HOME);
     }
 
-    public void OnLevelLose()
-    {
-        Hide(UIType.GAME);
-        Show(UIType.LOSE);
-    }
 }

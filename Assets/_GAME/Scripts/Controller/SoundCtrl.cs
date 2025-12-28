@@ -16,7 +16,7 @@ public class SoundCtrl : MonoBehaviour
     [SerializeField] AudioClip _bgMusic;
     [SerializeField] AudioClip _buttonClick, _win, _lose, _dead;
 
-    bool _isStopMusic = true;
+
     private void Awake()
     {
         I = this;
@@ -25,7 +25,7 @@ public class SoundCtrl : MonoBehaviour
     private void Start()
     {
         _queueSounds = new Queue<AudioSource>(_soundSources);
-        PlayMusic();
+        PlayMusic(_bgMusic);
     }
 
     public void OnVolumeSoundChange()
@@ -41,13 +41,10 @@ public class SoundCtrl : MonoBehaviour
         _musicSource.volume = PrefData.Music;
     }
 
-    public void PlayMusic()
+    public void PlayMusic(AudioClip clip)
     {
-        if (!_isStopMusic)
-            return;
-        _isStopMusic = false;
-        _musicSource.clip = _bgMusic;
         _musicSource.volume = PrefData.Music;
+        _musicSource.clip = clip;
         _musicSource.Play();
     }
 
@@ -88,8 +85,7 @@ public class SoundCtrl : MonoBehaviour
 
     public void StopMusic()
     {
-        _isStopMusic = true;
-        _musicSource.Stop();
+       _musicSource.Stop();
     }
 }
 public enum TypeSFX

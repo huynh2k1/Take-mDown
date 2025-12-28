@@ -1,4 +1,3 @@
-using DG.Tweening;
 using System;
 using TMPro;
 using UnityEngine;
@@ -7,7 +6,6 @@ using UnityEngine.UI;
 public class LevelButton : MonoBehaviour
 {
     public int ID;
-    [SerializeField] Transform _main;
     [SerializeField] Button _btn;
     [SerializeField] Image _bgButton;
     [SerializeField] GameObject _lockObj;
@@ -84,20 +82,6 @@ public class LevelButton : MonoBehaviour
         }else
         {
             _bgButton.sprite = _bgLock;
-        }
-    }
-
-    public void Hover(bool isHover)
-    {
-        _main.DOKill();
-
-        if (isHover)
-        {
-            _main.DOScale(0.4f, 1f).SetEase(Ease.InOutElastic).From(0.35f).SetLoops(-1, LoopType.Yoyo);
-        }
-        else
-        {
-            _main.localScale = Vector3.one * 0.35f;
         }
     }
 }

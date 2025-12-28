@@ -41,10 +41,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7767396768190973002}
-  - component: {fileID: 2534668145095059166}
-  - component: {fileID: 3344614444955298649}
-  - component: {fileID: 4198140640801934955}
-  - component: {fileID: 8186981651840160934}
+  - component: {fileID: 3219952261551367017}
+  - component: {fileID: 7306305328388141719}
+  - component: {fileID: 571361530671333047}
+  - component: {fileID: 4466163050026940483}
   m_Layer: 0
   m_Name: ShinL
   m_TagString: Player
@@ -68,7 +68,7 @@ Transform:
   - {fileID: 121646935689702477}
   m_Father: {fileID: 1706848116165092240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2534668145095059166
+--- !u!54 &3219952261551367017
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &3344614444955298649
+--- !u!144 &7306305328388141719
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,7 +103,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85331198325875518}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 1187474731218419772}
+  m_ConnectedBody: {fileID: 3586779762321786812}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.99958515, y: 0.028804608, z: -0.00022203522}
@@ -141,7 +141,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!136 &4198140640801934955
+--- !u!136 &571361530671333047
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,7 +156,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -164,7 +164,7 @@ CapsuleCollider:
   m_Height: 0.004194449
   m_Direction: 1
   m_Center: {x: -1.1641534e-10, y: 0.0020972246, z: 6.548362e-11}
---- !u!114 &8186981651840160934
+--- !u!114 &4466163050026940483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,10 +218,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3795480088237301537}
-  - component: {fileID: 1467178435748956879}
-  - component: {fileID: 2425993175405102840}
-  - component: {fileID: 8113407788188457419}
-  - component: {fileID: 8925684740334093246}
+  - component: {fileID: 3244792607003702778}
+  - component: {fileID: 6092200889573931089}
+  - component: {fileID: 8126278494477654011}
+  - component: {fileID: 7781792559687994308}
   m_Layer: 0
   m_Name: HandR
   m_TagString: Player
@@ -247,7 +247,7 @@ Transform:
   - {fileID: 1613926901828132614}
   m_Father: {fileID: 6474098023185104939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1467178435748956879
+--- !u!54 &3244792607003702778
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,7 +274,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &2425993175405102840
+--- !u!144 &6092200889573931089
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +282,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366261875258107835}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 3662789899313513344}
+  m_ConnectedBody: {fileID: 5700625464639162240}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.02994866, y: -0.000099242665, z: -0.16556221}
@@ -320,7 +320,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!65 &8113407788188457419
+--- !u!65 &8126278494477654011
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335,13 +335,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.0008675746, y: 0.0018722328, z: 0.0008675746}
   m_Center: {x: 0.00015738184, y: 0.0007020863, z: -0.000028891052}
---- !u!114 &8925684740334093246
+--- !u!114 &7781792559687994308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -467,35 +467,37 @@ MonoBehaviour:
   rightUpLeftConstraint: {fileID: 130014295859830841}
   target: {fileID: 0}
   _rbRagdoll:
-  - {fileID: 1169596588717505071}
-  - {fileID: 8835242951653535639}
-  - {fileID: 8731310414799483397}
-  - {fileID: 6587902342265346353}
-  - {fileID: 3258600992547552645}
-  - {fileID: 3129161097547102362}
-  - {fileID: 3662789899313513344}
-  - {fileID: 1467178435748956879}
-  - {fileID: 1187474731218419772}
-  - {fileID: 2534668145095059166}
-  - {fileID: 4082868261350084709}
-  - {fileID: 5168664310083660525}
-  - {fileID: 6442504623047756061}
-  - {fileID: 3051365423255215559}
+  - {fileID: 5737044148544319776}
+  - {fileID: 9139553673056193850}
+  - {fileID: 2837482853751854279}
+  - {fileID: 5243507877384407568}
+  - {fileID: 5218443963653927756}
+  - {fileID: 5230585088722942601}
+  - {fileID: 8244207854378904765}
+  - {fileID: 5700625464639162240}
+  - {fileID: 3244792607003702778}
+  - {fileID: 3586779762321786812}
+  - {fileID: 3219952261551367017}
+  - {fileID: 8197666859707578202}
+  - {fileID: 8957372594333400995}
+  - {fileID: 9084651425765553324}
+  - {fileID: 1431830321318122027}
   _colliders:
-  - {fileID: 5899799022658130274}
-  - {fileID: 3307981057263744131}
-  - {fileID: 3694887639000299084}
-  - {fileID: 5722146022067094704}
-  - {fileID: 1978318996718486619}
-  - {fileID: 7699534556953266379}
-  - {fileID: 1833300672351749394}
-  - {fileID: 8113407788188457419}
-  - {fileID: 8987142555065357826}
-  - {fileID: 4198140640801934955}
-  - {fileID: 5735258942485783600}
-  - {fileID: 7994365004037025388}
-  - {fileID: 4676950372056252085}
-  - {fileID: 3510135874612233550}
+  - {fileID: 8687245888160384128}
+  - {fileID: 8136924033494037046}
+  - {fileID: 5156650432650591270}
+  - {fileID: 2379355813729157371}
+  - {fileID: 6343610811291571698}
+  - {fileID: 2043739093907324304}
+  - {fileID: 4861720477563685202}
+  - {fileID: 8805786650578000268}
+  - {fileID: 8126278494477654011}
+  - {fileID: 25022027221040950}
+  - {fileID: 571361530671333047}
+  - {fileID: 6846284438127966641}
+  - {fileID: 8335928302383817169}
+  - {fileID: 8592847110813799348}
+  - {fileID: 2625619087234679177}
   followSpeed: 50
 --- !u!114 &4176911912154753683
 MonoBehaviour:
@@ -684,10 +686,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 448173881909570230}
-  - component: {fileID: 3051365423255215559}
-  - component: {fileID: 7328777254551687037}
-  - component: {fileID: 3510135874612233550}
-  - component: {fileID: 3640715049351673286}
+  - component: {fileID: 1431830321318122027}
+  - component: {fileID: 3158898995042619120}
+  - component: {fileID: 2625619087234679177}
+  - component: {fileID: 872787610364637640}
   m_Layer: 0
   m_Name: FootR
   m_TagString: Player
@@ -711,7 +713,7 @@ Transform:
   - {fileID: 8284514748262812878}
   m_Father: {fileID: 3201896836467462530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3051365423255215559
+--- !u!54 &1431830321318122027
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -738,7 +740,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &7328777254551687037
+--- !u!144 &3158898995042619120
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -746,7 +748,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236688391583695000}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 6442504623047756061}
+  m_ConnectedBody: {fileID: 9084651425765553324}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.9995913, y: 0.02852265, z: -0.0021038484}
@@ -784,7 +786,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!65 &3510135874612233550
+--- !u!65 &2625619087234679177
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -799,13 +801,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.0016471206, y: 0.002138717, z: 0.0016471206}
   m_Center: {x: 2.110028e-10, y: 0.0008225835, z: -4.0745368e-10}
---- !u!114 &3640715049351673286
+--- !u!114 &872787610364637640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -953,10 +955,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2601871915358010494}
-  - component: {fileID: 1169596588717505071}
-  - component: {fileID: 4983510958379733271}
-  - component: {fileID: 5899799022658130274}
-  - component: {fileID: 6733083998566842281}
+  - component: {fileID: 9139553673056193850}
+  - component: {fileID: 1821922310534746630}
+  - component: {fileID: 8136924033494037046}
+  - component: {fileID: 5472464372466395712}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Player
@@ -984,7 +986,7 @@ Transform:
   - {fileID: 6105695512341830749}
   m_Father: {fileID: 347712262293053517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1169596588717505071
+--- !u!54 &9139553673056193850
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1011,7 +1013,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &4983510958379733271
+--- !u!144 &1821922310534746630
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1019,13 +1021,13 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550301446858414447}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 3818829458284543010}
+  m_ConnectedBody: {fileID: 5737044148544319776}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0.99999994, y: -0.000000119046234, z: -0.00000048310096}
+  m_Axis: {x: 1, y: -1.6191493e-12, z: -0.0000004768372}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_SwingAxis: {x: 0.00000047617834, y: -0.05254438, z: 0.9986185}
+  m_SwingAxis: {x: 0.0000004761784, y: -0.052544497, z: 0.99861854}
   m_TwistLimitSpring:
     spring: 0
     damper: 0
@@ -1057,7 +1059,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!65 &5899799022658130274
+--- !u!65 &8136924033494037046
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1072,13 +1074,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0028333338, y: 0.0029520234, z: 0.0021812327}
-  m_Center: {x: -7.275999e-11, y: -0.007657347, z: -0.00015256264}
---- !u!114 &6733083998566842281
+  m_Size: {x: 0.0024860585, y: 0.0019197232, z: 0.0021812327}
+  m_Center: {x: -4.9670534e-10, y: -0.0011930426, z: -0.00015256337}
+--- !u!114 &5472464372466395712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1100,10 +1102,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1706848116165092240}
-  - component: {fileID: 1187474731218419772}
-  - component: {fileID: 8567967145228223784}
-  - component: {fileID: 8987142555065357826}
-  - component: {fileID: 9088090828158093851}
+  - component: {fileID: 3586779762321786812}
+  - component: {fileID: 3242200945650567141}
+  - component: {fileID: 25022027221040950}
+  - component: {fileID: 7805801473968388693}
   m_Layer: 0
   m_Name: ThighL
   m_TagString: Player
@@ -1128,7 +1130,7 @@ Transform:
   - {fileID: 7767396768190973002}
   m_Father: {fileID: 7050026160906038298}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1187474731218419772
+--- !u!54 &3586779762321786812
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1155,7 +1157,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &8567967145228223784
+--- !u!144 &3242200945650567141
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1163,7 +1165,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661737925159649977}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 3818829458284543010}
+  m_ConnectedBody: {fileID: 5737044148544319776}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.9989693, y: 0.045375116, z: -0.0012282189}
@@ -1201,7 +1203,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!136 &8987142555065357826
+--- !u!136 &25022027221040950
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1216,7 +1218,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1224,7 +1226,7 @@ CapsuleCollider:
   m_Height: 0.004035548
   m_Direction: 1
   m_Center: {x: 1.8189897e-10, y: 0.002017774, z: 0}
---- !u!114 &9088090828158093851
+--- !u!114 &7805801473968388693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1277,10 +1279,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3673508743010448487}
-  - component: {fileID: 8731310414799483397}
-  - component: {fileID: 3261907048237808901}
-  - component: {fileID: 3694887639000299084}
-  - component: {fileID: 4480090307289648688}
+  - component: {fileID: 5243507877384407568}
+  - component: {fileID: 6043889288869391622}
+  - component: {fileID: 2379355813729157371}
+  - component: {fileID: 4976025954183463303}
   m_Layer: 0
   m_Name: UpperArmL
   m_TagString: Player
@@ -1304,7 +1306,7 @@ Transform:
   - {fileID: 2024730782918133955}
   m_Father: {fileID: 6300014253247463716}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &8731310414799483397
+--- !u!54 &5243507877384407568
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1331,7 +1333,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &3261907048237808901
+--- !u!144 &6043889288869391622
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1339,7 +1341,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825054285862150454}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 1169596588717505071}
+  m_ConnectedBody: {fileID: 9139553673056193850}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.017604757, y: -0.0000001040753, z: -0.28139508}
@@ -1377,7 +1379,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!136 &3694887639000299084
+--- !u!136 &2379355813729157371
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1392,7 +1394,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1400,7 +1402,7 @@ CapsuleCollider:
   m_Height: 0.0023512132
   m_Direction: 1
   m_Center: {x: 4.0745357e-10, y: 0.0011756066, z: -0.0000000019499564}
---- !u!114 &4480090307289648688
+--- !u!114 &4976025954183463303
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1516,10 +1518,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2024730782918133955}
-  - component: {fileID: 6587902342265346353}
-  - component: {fileID: 8075554123561036684}
-  - component: {fileID: 5722146022067094704}
-  - component: {fileID: 524658800288623241}
+  - component: {fileID: 5218443963653927756}
+  - component: {fileID: 6615229609098006592}
+  - component: {fileID: 6343610811291571698}
+  - component: {fileID: 7141385756845337713}
   m_Layer: 0
   m_Name: LoweArmL
   m_TagString: Player
@@ -1543,7 +1545,7 @@ Transform:
   - {fileID: 5335755075867624746}
   m_Father: {fileID: 3673508743010448487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &6587902342265346353
+--- !u!54 &5218443963653927756
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1570,7 +1572,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &8075554123561036684
+--- !u!144 &6615229609098006592
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1578,7 +1580,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022618005017709950}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 8731310414799483397}
+  m_ConnectedBody: {fileID: 5243507877384407568}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.23161717, y: 0.00000029115472, z: 0.057011068}
@@ -1616,7 +1618,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!136 &5722146022067094704
+--- !u!136 &6343610811291571698
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1631,7 +1633,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1639,7 +1641,7 @@ CapsuleCollider:
   m_Height: 0.0019903076
   m_Direction: 1
   m_Center: {x: 3.6652645e-10, y: 0.0009951538, z: 3.0195227e-10}
---- !u!114 &524658800288623241
+--- !u!114 &7141385756845337713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2211,10 +2213,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6474098023185104939}
-  - component: {fileID: 3662789899313513344}
-  - component: {fileID: 5979463721812096080}
-  - component: {fileID: 1833300672351749394}
-  - component: {fileID: 460899378768660067}
+  - component: {fileID: 5700625464639162240}
+  - component: {fileID: 8073534459695530773}
+  - component: {fileID: 8805786650578000268}
+  - component: {fileID: 2062602840494858615}
   m_Layer: 0
   m_Name: LoweArmR
   m_TagString: Player
@@ -2238,7 +2240,7 @@ Transform:
   - {fileID: 3795480088237301537}
   m_Father: {fileID: 7092177079502595934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3662789899313513344
+--- !u!54 &5700625464639162240
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2265,7 +2267,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &5979463721812096080
+--- !u!144 &8073534459695530773
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2273,7 +2275,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3772894523512756245}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 3129161097547102362}
+  m_ConnectedBody: {fileID: 8244207854378904765}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.2394095, y: -0.00000004284084, z: 0.068875134}
@@ -2311,7 +2313,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!136 &1833300672351749394
+--- !u!136 &8805786650578000268
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2326,7 +2328,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2334,7 +2336,7 @@ CapsuleCollider:
   m_Height: 0.0020839854
   m_Direction: 1
   m_Center: {x: -0.0000000015879775, y: 0.0010419927, z: -9.458746e-11}
---- !u!114 &460899378768660067
+--- !u!114 &2062602840494858615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2584,10 +2586,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7092177079502595934}
-  - component: {fileID: 3129161097547102362}
-  - component: {fileID: 1927535435709402428}
-  - component: {fileID: 7699534556953266379}
-  - component: {fileID: 6812786479242854901}
+  - component: {fileID: 8244207854378904765}
+  - component: {fileID: 8213078851968038532}
+  - component: {fileID: 4861720477563685202}
+  - component: {fileID: 3066493963596579840}
   m_Layer: 0
   m_Name: UpperArmR
   m_TagString: Player
@@ -2611,7 +2613,7 @@ Transform:
   - {fileID: 6474098023185104939}
   m_Father: {fileID: 6105695512341830749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3129161097547102362
+--- !u!54 &8244207854378904765
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2638,7 +2640,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &1927535435709402428
+--- !u!144 &8213078851968038532
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2646,7 +2648,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4964223021797641161}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 1169596588717505071}
+  m_ConnectedBody: {fileID: 9139553673056193850}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.0140571715, y: 0.00000018937862, z: -0.27077782}
@@ -2684,7 +2686,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!136 &7699534556953266379
+--- !u!136 &4861720477563685202
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2699,7 +2701,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2707,7 +2709,7 @@ CapsuleCollider:
   m_Height: 0.002259556
   m_Direction: 1
   m_Center: {x: 3.6379795e-11, y: 0.001129778, z: -0.000000001047738}
---- !u!114 &6812786479242854901
+--- !u!114 &3066493963596579840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3006,10 +3008,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 121646935689702477}
-  - component: {fileID: 4082868261350084709}
-  - component: {fileID: 4603227188749411843}
-  - component: {fileID: 5735258942485783600}
-  - component: {fileID: 3025022160554153634}
+  - component: {fileID: 8197666859707578202}
+  - component: {fileID: 950624523552287922}
+  - component: {fileID: 6846284438127966641}
+  - component: {fileID: 6525556470411388566}
   m_Layer: 0
   m_Name: FootL
   m_TagString: Player
@@ -3033,7 +3035,7 @@ Transform:
   - {fileID: 2125808338544070633}
   m_Father: {fileID: 7767396768190973002}
   m_LocalEulerAnglesHint: {x: 74.415, y: 171.029, z: -8.319}
---- !u!54 &4082868261350084709
+--- !u!54 &8197666859707578202
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3060,7 +3062,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &4603227188749411843
+--- !u!144 &950624523552287922
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3068,7 +3070,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5842546653381027294}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 2534668145095059166}
+  m_ConnectedBody: {fileID: 3219952261551367017}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.9998074, y: 0.013575314, z: 0.014190597}
@@ -3106,7 +3108,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!65 &5735258942485783600
+--- !u!65 &6846284438127966641
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3121,13 +3123,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.0016457394, y: 0.0021079138, z: 0.0016457394}
   m_Center: {x: 8.5947256e-11, y: 0.0008107361, z: -1.7462301e-10}
---- !u!114 &3025022160554153634
+--- !u!114 &6525556470411388566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3213,10 +3215,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2823447772811305217}
-  - component: {fileID: 5168664310083660525}
-  - component: {fileID: 6089167947343657736}
-  - component: {fileID: 7994365004037025388}
-  - component: {fileID: 2495590881474540872}
+  - component: {fileID: 8957372594333400995}
+  - component: {fileID: 4024385509428893431}
+  - component: {fileID: 8335928302383817169}
+  - component: {fileID: 7275930884222739536}
   m_Layer: 0
   m_Name: ThighR
   m_TagString: Player
@@ -3241,7 +3243,7 @@ Transform:
   - {fileID: 3201896836467462530}
   m_Father: {fileID: 7050026160906038298}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5168664310083660525
+--- !u!54 &8957372594333400995
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3268,7 +3270,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &6089167947343657736
+--- !u!144 &4024385509428893431
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3276,7 +3278,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6360685127112802735}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 3818829458284543010}
+  m_ConnectedBody: {fileID: 5737044148544319776}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -0.99644494, y: -0.084125504, z: -0.0045300573}
@@ -3314,7 +3316,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!136 &7994365004037025388
+--- !u!136 &8335928302383817169
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3329,7 +3331,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3337,7 +3339,7 @@ CapsuleCollider:
   m_Height: 0.0040457337
   m_Direction: 1
   m_Center: {x: -2.0372681e-10, y: 0.0020228669, z: 2.3283064e-10}
---- !u!114 &2495590881474540872
+--- !u!114 &7275930884222739536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3359,9 +3361,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7050026160906038298}
-  - component: {fileID: 1789918328719245072}
-  - component: {fileID: 3818829458284543010}
-  - component: {fileID: 7396682126283773199}
+  - component: {fileID: 5737044148544319776}
+  - component: {fileID: 8687245888160384128}
+  - component: {fileID: 540094211877983148}
   m_Layer: 0
   m_Name: Armature
   m_TagString: Player
@@ -3388,20 +3390,7 @@ Transform:
   - {fileID: 2823447772811305217}
   m_Father: {fileID: 853260722531847381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1789918328719245072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6508579262726547440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e15592b5da64696478cea6df797bbd16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
---- !u!54 &3818829458284543010
+--- !u!54 &5737044148544319776
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3428,7 +3417,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &7396682126283773199
+--- !u!65 &8687245888160384128
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3443,12 +3432,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0026666662, y: 0.0024999992, z: 0.0025833333}
-  m_Center: {x: 0, y: -0.00008333336, z: 0.0004999999}
+  m_Size: {x: 0.0021021, y: 0.0028336886, z: 0.0019115093}
+  m_Center: {x: 0, y: -0.00008333206, z: 0.011727404}
+--- !u!114 &540094211877983148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508579262726547440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15592b5da64696478cea6df797bbd16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!1 &6551919059351568466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,10 +3492,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6680567799214164471}
-  - component: {fileID: 8835242951653535639}
-  - component: {fileID: 2124826478952734301}
-  - component: {fileID: 3307981057263744131}
-  - component: {fileID: 4276419995511420116}
+  - component: {fileID: 2837482853751854279}
+  - component: {fileID: 7622310553931567426}
+  - component: {fileID: 5156650432650591270}
+  - component: {fileID: 218718106690919575}
   m_Layer: 0
   m_Name: Head
   m_TagString: Player
@@ -3517,7 +3519,7 @@ Transform:
   - {fileID: 1298282203917891041}
   m_Father: {fileID: 4323518931705275712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &8835242951653535639
+--- !u!54 &2837482853751854279
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3544,7 +3546,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &2124826478952734301
+--- !u!144 &7622310553931567426
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3552,7 +3554,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6788259399959291122}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 1169596588717505071}
+  m_ConnectedBody: {fileID: 9139553673056193850}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 1.314504e-13, z: -5.1958438e-14}
@@ -3590,7 +3592,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!135 &3307981057263744131
+--- !u!135 &5156650432650591270
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3605,13 +3607,13 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.0008333332
   m_Center: {x: -9.020562e-17, y: 0.00075, z: -0.00025000004}
---- !u!114 &4276419995511420116
+--- !u!114 &218718106690919575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4060,10 +4062,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5335755075867624746}
-  - component: {fileID: 3258600992547552645}
-  - component: {fileID: 4126457331244597911}
-  - component: {fileID: 1978318996718486619}
-  - component: {fileID: 4824776365109944057}
+  - component: {fileID: 5230585088722942601}
+  - component: {fileID: 6741613553312060778}
+  - component: {fileID: 2043739093907324304}
+  - component: {fileID: 1506593807959870564}
   m_Layer: 0
   m_Name: HandL
   m_TagString: Player
@@ -4089,7 +4091,7 @@ Transform:
   - {fileID: 4787235882901684988}
   m_Father: {fileID: 2024730782918133955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3258600992547552645
+--- !u!54 &5230585088722942601
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4116,7 +4118,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &4126457331244597911
+--- !u!144 &6741613553312060778
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4124,7 +4126,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8890957494362057875}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 6587902342265346353}
+  m_ConnectedBody: {fileID: 5218443963653927756}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.055101585, y: -0.003433566, z: -0.1614814}
@@ -4162,7 +4164,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!65 &1978318996718486619
+--- !u!65 &2043739093907324304
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4177,13 +4179,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.0008682838, y: 0.0018886018, z: 0.0008682838}
   m_Center: {x: -0.00014608772, y: 0.000708576, z: -0.000064916254}
---- !u!114 &4824776365109944057
+--- !u!114 &1506593807959870564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4236,10 +4238,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3201896836467462530}
-  - component: {fileID: 6442504623047756061}
-  - component: {fileID: 1330810143787094005}
-  - component: {fileID: 4676950372056252085}
-  - component: {fileID: 6572842501805036762}
+  - component: {fileID: 9084651425765553324}
+  - component: {fileID: 8877456223664416052}
+  - component: {fileID: 8592847110813799348}
+  - component: {fileID: 4820875544949034281}
   m_Layer: 0
   m_Name: ShinR
   m_TagString: Player
@@ -4263,7 +4265,7 @@ Transform:
   - {fileID: 448173881909570230}
   m_Father: {fileID: 2823447772811305217}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &6442504623047756061
+--- !u!54 &9084651425765553324
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4290,7 +4292,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!144 &1330810143787094005
+--- !u!144 &8877456223664416052
 CharacterJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4298,7 +4300,7 @@ CharacterJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9082421426033422822}
   serializedVersion: 3
-  m_ConnectedBody: {fileID: 5168664310083660525}
+  m_ConnectedBody: {fileID: 8957372594333400995}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0.99968654, y: -0.02501282, z: 0.0012233271}
@@ -4336,7 +4338,7 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!136 &4676950372056252085
+--- !u!136 &8592847110813799348
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4351,7 +4353,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -4359,7 +4361,7 @@ CapsuleCollider:
   m_Height: 0.004194374
   m_Direction: 1
   m_Center: {x: 2.0372681e-10, y: 0.002097187, z: -5.1659294e-10}
---- !u!114 &6572842501805036762
+--- !u!114 &4820875544949034281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

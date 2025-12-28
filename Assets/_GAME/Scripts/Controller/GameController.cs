@@ -17,7 +17,6 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         I = this;
-        Application.targetFrameRate = 120;
     }
 
     private void Start()
@@ -50,26 +49,21 @@ public class GameController : MonoBehaviour
 
     void InitialGame()
     {
+        Application.targetFrameRate = 120;
+
         CurState = State.WAIT;
-        SoundCtrl.I.PlayMusic();
         uiCtrl.ShowHome();
     }
 
     void BackToHome()
     {
         CurState = State.WAIT;
-        SoundCtrl.I.PlayMusic();
         uiCtrl.SwitchUI(UIType.GAME, UIType.HOME);
     }
 
     void StartGame(int id)
     {
-        uiCtrl.TransitionFX(() =>
-        {
-            uiCtrl.Hide(UIType.SELECTLEVEL);
-            uiCtrl.Hide(UIType.HOME);
-            uiCtrl.Show(UIType.GAME);
-        });
+        uiCtrl.SwitchUI(UIType.HOME, UIType.GAME);
         SetupGame(id);
     }
 
@@ -79,30 +73,23 @@ public class GameController : MonoBehaviour
         levelCtrl.InitLevelByID(id);
         playerCtrl.Init();
         panelHeart.Init();
-        SoundCtrl.I.PlayMusic();
     }
 
     public void WinGame()
     {
         if (CurState != State.PLAYING)
             return;
-
-        SoundCtrl.I.StopMusic();
         SoundCtrl.I.PlaySFXByType(TypeSFX.WIN);
         CurState = State.WAIT;
         levelCtrl.OnLevelWin();
-        uiCtrl.OnLevelWin();
+        uiCtrl.Show(UIType.WIN);
     }
 
     public void LoseGame()
     {
-        if (CurState != State.PLAYING)
-            return;
-        SoundCtrl.I.StopMusic();
         SoundCtrl.I.PlaySFXByType(TypeSFX.LOSE);
         CurState = State.WAIT;
         uiCtrl.Show(UIType.LOSE);
-        uiCtrl.OnLevelLose();
     }
 
     void PauseGame()
