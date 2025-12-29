@@ -3312,6 +3312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: School_Morning_2
       objectReference: {fileID: 0}
+    - target: {fileID: 3278718312801691304, guid: 4a7efe85f18706e42839f989c81f48cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4279394828895200775, guid: 4a7efe85f18706e42839f989c81f48cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4166,7 +4170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 1760912808}
-  _targetGraphic: {fileID: 0}
 --- !u!1 &1762275214
 GameObject:
   m_ObjectHideFlags: 0
@@ -5265,7 +5268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7263976867466519097, guid: 633be8c4fc0668d47b750c25f5c1b613, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7376312042687345181, guid: 633be8c4fc0668d47b750c25f5c1b613, type: 3}
       propertyPath: m_LocalPosition.x
