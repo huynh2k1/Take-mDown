@@ -3,14 +3,15 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public static GameController I;
-    public State CurState {  get; private set; }
+    public State CurState {  get; set; }
 
     [Header("Refenrences")]
     [SerializeField] UIController uiCtrl;
     [SerializeField] LevelCtrl levelCtrl;
     [SerializeField] PlayerController playerCtrl; 
     [SerializeField] PanelHeart panelHeart;
-
+    [SerializeField] MapCtrl mapCtrl;
+    [SerializeField] Tutorial tutorial;
     public enum State { WAIT, PLAYING }
 
 
@@ -69,10 +70,16 @@ public class GameController : MonoBehaviour
 
     void SetupGame(int id)
     {
-        CurState = State.PLAYING;
         levelCtrl.InitLevelByID(id);
         playerCtrl.Init();
         panelHeart.Init();
+        mapCtrl.RandomMap();
+        if(PrefData.CurLevel < 1)
+        {
+            tutorial.Show();
+            return;
+        }
+        CurState = State.PLAYING;
     }
 
     public void WinGame()
