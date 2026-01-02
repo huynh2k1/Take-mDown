@@ -31,8 +31,8 @@ public class PlayerController : MonoBehaviour
     const float CAM_POSITION_LEFT = -0.5f;
     const float CAM_POSITION_RIGHT = 0.5f;
 
-    const float POS_LEFT = -1.6f;
-    const float POS_RIGHT = 1.6f;
+    const float POS_LEFT = -1.8f;
+    const float POS_RIGHT = 1.5f;
 
     Vector2 swipeStartPos;
     bool isSwipeDetected = false;
