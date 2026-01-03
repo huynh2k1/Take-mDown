@@ -335,14 +335,14 @@ public class PlayerController : MonoBehaviour
         seq.Join(transform.DORotate(
             new Vector3(0, playerStartY, 0),
             0.1f
-        ).SetEase(Ease.OutQuad));
+        ).SetEase(Ease.Linear));
 
-        seq.Append(transform.DOMove(new Vector3(targetX, 0, 0), 0.5f).SetEase(Ease.InOutQuad));
+        seq.Append(transform.DOMove(new Vector3(targetX, 0, 0), 0.4f).SetEase(Ease.Linear));
 
         seq.Append(transform.DORotate(
             new Vector3(0, 180f, 0),
             0.1f
-        ).SetEase(Ease.OutQuad));
+        ).SetEase(Ease.Linear));
 
         seq.OnComplete(() =>
         {

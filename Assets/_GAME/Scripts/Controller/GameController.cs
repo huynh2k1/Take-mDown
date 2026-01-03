@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
         InitialGame();
     }
 
@@ -50,7 +51,6 @@ public class GameController : MonoBehaviour
 
     void InitialGame()
     {
-        Application.targetFrameRate = 120;
 
         CurState = State.WAIT;
         uiCtrl.ShowHome();
