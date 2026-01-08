@@ -119,7 +119,8 @@ public class Enemy : BaseObjectMove
         {
             _isDead = true;
             _audioSource.volume = PrefData.Sound;
-            _audioSource.Play();
+            AudioClip clip = _audioSource.clip;
+            _audioSource.PlayOneShot(clip);
 
 
             if (part.transform.position.y < 1f)
