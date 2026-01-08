@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -13,6 +14,8 @@ public class GameController : MonoBehaviour
     [SerializeField] MapCtrl mapCtrl;
     [SerializeField] Tutorial tutorial;
     public enum State { WAIT, PLAYING }
+
+    public static Action OnHeartReduce;
 
 
     private void Awake()
@@ -145,6 +148,7 @@ public class GameController : MonoBehaviour
     public void ReduceHeart()
     {
         panelHeart.ReduceHeart();
+        OnHeartReduce?.Invoke();
     }
 
 

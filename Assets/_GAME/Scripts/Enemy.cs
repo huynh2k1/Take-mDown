@@ -28,6 +28,7 @@ public class Enemy : BaseObjectMove
     #endregion
     [SerializeField] AudioSource _audioSource;
     [SerializeField] Animator _animator;
+    [SerializeField] ParticleSystem _effect;
     Rigidbody[] _rbRagdoll;
     Collider[] _colliders;
 
@@ -80,14 +81,6 @@ public class Enemy : BaseObjectMove
         DisableRagdoll();
     }
 
-    void Dead()
-    {
-        //_animator.enabled = false;
-        _animator.SetBool("FallForward", true);
-        //EnableRagdoll();
-        _isDead = true;               
-    }
-
     public void EnableRagdoll()
     {
         foreach (var c in _colliders)
@@ -121,17 +114,17 @@ public class Enemy : BaseObjectMove
             _audioSource.volume = PrefData.Sound;
             AudioClip clip = _audioSource.clip;
             _audioSource.PlayOneShot(clip);
-
+            _effect.Play();
 
             if (part.transform.position.y < 1f)
             {
-                Dead(); // Bật ragdoll
+                _animator.SetBool("FallForward", true);
             }
             else
             {
                 _animator.SetBool("SweepFall", true);
-                _isDead = true;
             }
+            _isDead = true;
 
         }
     }
