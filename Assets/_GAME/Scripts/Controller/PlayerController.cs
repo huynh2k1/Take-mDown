@@ -106,9 +106,11 @@ public class PlayerController : MonoBehaviour
     [Button("Init")]
     public void Init()
     {
-        animator.enabled = true;
+        DisableRagdoll();
+
         isDead = false;
         isLeft = true;
+        isRolling = false;
 
         float camX = cam.transform.eulerAngles.x;
         cam.transform.rotation = Quaternion.Euler(
@@ -121,6 +123,7 @@ public class PlayerController : MonoBehaviour
         target.position = Vector3.zero;
         initTargetPos = target.position;
         transform.position = new Vector3(POS_LEFT, 0, 0);
+        transform.rotation = Quaternion.Euler(0, 180, 0);
 
 
         dragPlane = new Plane(-cam.transform.forward, target.position);
@@ -132,7 +135,14 @@ public class PlayerController : MonoBehaviour
         {
             part.onTriggerEnter += (other, part) => OnRagdollTrigger(other, part);
         }
-        DisableRagdoll();
+
+        // RESET ANIMATOR PARAMS
+        animator.enabled = true;
+        animator.Rebind();
+        animator.Update(0f);
+        animator.SetBool("Roll", false);
+
+        animator.Play("Idle");
     }
 
     #endregion
@@ -344,6 +354,13 @@ public class PlayerController : MonoBehaviour
             0.1f
         ).SetEase(Ease.Linear));
 
+        seq.OnUpdate(() =>
+        {
+            if (isDead)
+            {
+                seq.Kill();
+            }
+        });
         seq.OnComplete(() =>
         {
             animator.SetBool("Roll", false);
